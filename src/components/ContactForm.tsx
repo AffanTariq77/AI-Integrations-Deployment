@@ -116,7 +116,7 @@ const ContactForm = ({ onlyForm = false }: { onlyForm?: boolean }) => {
         className="w-full hover:bg-sky-400 hover:shadow-sky-blue bg-[#192841] text-white text-base font-semibold rounded-lg py-3 sm:py-4"
         disabled={loading}
       >
-        {loading ? "Booking..." : "Book My Strategy Call"}
+        {loading ? "Starting..." : "Start Your AI Implementation"}
       </Button>
     </form>
   );
@@ -126,25 +126,23 @@ const ContactForm = ({ onlyForm = false }: { onlyForm?: boolean }) => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Start Your Project
+            Your Data Is Talking. Are You Listening?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            You have the vision. We have the engineering team to build it. Tell us about your goals,
-and we'll define the bridge to get you there.
+            Stop wondering "what if" and start seeing what AI can do for your bottom line.
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">Fill out the form below to secure your free strategy session.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Benefits */}
           <div className="space-y-8">
-            <h3 className="text-2xl sm:text-3xl font-bold">Ready to start?</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold">Ready to connect?</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-lg">Deliverable</h4>
                   <p className="text-muted-foreground">
-                    Receive a clear AI Roadmap.
+                    Get a technical integration plan.
                   </p>
                 </div>
               </div>
@@ -153,7 +151,7 @@ and we'll define the bridge to get you there.
                 <div>
                   <h4 className="font-semibold text-lg">Clarity</h4>
                   <p className="text-muted-foreground">
-                    Identify your highest-ROI opportunities in 30 mins.
+                    See how your specific stack connects to AI.
                   </p>
                 </div>
               </div>

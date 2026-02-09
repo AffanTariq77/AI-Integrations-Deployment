@@ -3,75 +3,77 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 
 const TechStack = () => {
-  // The Strategy & Data Stack
+  // The Integration & Backend Stack
   const techCategories = {
-    aiModels: [
+    orchestration: [
       {
-        name: "OpenAI",
+        name: "LangChain",
         details: {
-          title: "OpenAI",
-          desc: "For feasibility testing",
-          url: "https://openai.com/",
+          title: "LangChain",
+          desc: "For managing complex flows",
+          url: "https://www.langchain.com/",
         },
       },
       {
-        name: "Anthropic",
+        name: "AutoGen",
         details: {
-          title: "Anthropic",
-          desc: "For feasibility testing",
-          url: "https://www.anthropic.com/",
-        },
-      },
-      {
-        name: "Cohere",
-        details: {
-          title: "Cohere",
-          desc: "For feasibility testing",
-          url: "https://cohere.com/",
+          title: "AutoGen",
+          desc: "For managing complex flows",
+          url: "https://microsoft.github.io/autogen/",
         },
       },
     ],
-    dataStrategy: [
+    backend: [
       {
-        name: "Snowflake",
+        name: "Python (FastAPI)",
         details: {
-          title: "Snowflake",
-          desc: "For data readiness",
-          url: "https://www.snowflake.com/",
+          title: "Python (FastAPI)",
+          desc: "For secure, scalable APIs",
+          url: "https://fastapi.tiangolo.com/",
         },
       },
       {
-        name: "BigQuery",
+        name: "Node.js",
         details: {
-          title: "BigQuery",
-          desc: "For data readiness",
-          url: "https://cloud.google.com/bigquery",
-        },
-      },
-      {
-        name: "LlamaIndex",
-        details: {
-          title: "LlamaIndex",
-          desc: "For data readiness",
-          url: "https://www.llamaindex.ai/",
+          title: "Node.js",
+          desc: "For high-speed APIs",
+          url: "https://nodejs.org/",
         },
       },
     ],
-    vectorDBs: [
+    infrastructure: [
       {
-        name: "Pinecone",
+        name: "Docker",
         details: {
-          title: "Pinecone",
-          desc: "For knowledge retrieval planning",
-          url: "https://www.pinecone.io/",
+          title: "Docker",
+          desc: "For scalable deployment",
+          url: "https://www.docker.com/",
         },
       },
       {
-        name: "Weaviate",
+        name: "Kubernetes",
         details: {
-          title: "Weaviate",
-          desc: "For knowledge retrieval planning",
-          url: "https://weaviate.io/",
+          title: "Kubernetes",
+          desc: "For scalable deployment",
+          url: "https://kubernetes.io/",
+        },
+      },
+    ],
+    cloud: [
+      {
+        name: "AWS Lambda",
+        details: {
+          title: "AWS Lambda",
+          desc: "For serverless execution",
+          url: "https://aws.amazon.com/lambda/",
+        },
+      },
+      {
+        name: "Azure Functions",
+        details: {
+          title: "Azure Functions",
+          desc: "For serverless execution",
+          url: "https://azure.microsoft.com/products/functions/",
         },
       },
     ],
@@ -122,19 +124,20 @@ const TechStack = () => {
             className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-3 xs:mb-4"
             style={{ color: "#192841" }}
           >
-            The Strategy & Data Stack
+            The Integration & Backend Stack
           </h2>
           <p className="text-sm xs:text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tools we use to validate feasibility and structure your data.
+            The infrastructure we use to connect and secure your systems.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <Tabs defaultValue="aiModels" className="w-full">
-            <TabsList className="grid grid-cols-3 w-full mb-8 xs:mb-10 sm:mb-12 gap-1 xs:gap-2 h-auto p-1 xs:p-1.5">
-              <TabsTrigger value="aiModels" className="text-xs xs:text-sm py-2 xs:py-3">AI & Models</TabsTrigger>
-              <TabsTrigger value="dataStrategy" className="text-xs xs:text-sm py-2 xs:py-3">Data Strategy</TabsTrigger>
-              <TabsTrigger value="vectorDBs" className="text-xs xs:text-sm py-2 xs:py-3">Vector DBs</TabsTrigger>
+          <Tabs defaultValue="orchestration" className="w-full">
+            <TabsList className="grid grid-cols-2 sm:grid-cols-4 w-full mb-8 xs:mb-10 sm:mb-12 gap-1 xs:gap-2 h-auto p-1 xs:p-1.5">
+              <TabsTrigger value="orchestration" className="text-xs xs:text-sm py-2 xs:py-3">Orchestration</TabsTrigger>
+              <TabsTrigger value="backend" className="text-xs xs:text-sm py-2 xs:py-3">Backend</TabsTrigger>
+              <TabsTrigger value="infrastructure" className="text-xs xs:text-sm py-2 xs:py-3">Infrastructure</TabsTrigger>
+              <TabsTrigger value="cloud" className="text-xs xs:text-sm py-2 xs:py-3">Cloud</TabsTrigger>
             </TabsList>
             {Object.entries(techCategories).map(([key, technologies]) => (
               <TabsContent key={key} value={key} className="space-y-6 xs:space-y-8">

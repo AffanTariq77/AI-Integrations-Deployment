@@ -14,23 +14,23 @@ const Services = () => {
   const services = [
     {
       icon: Lightbulb,
-      title: "Custom AI Workflows",
+      title: "Intelligent API Orchestration",
       description: [
-        "Automate repetitive and data-heavy tasks. We architect intelligent workflows tailored to your specific operations - freeing your teams to focus on strategy, growth, and innovation while AI handles the execution.",
+        "We don't just write scripts; we build robust middleware. We connect your core systems (Salesforce, ERPs, SQL Databases) to AI models, allowing them to read, write, and act on your data automatically - without manual copy-pasting.",
       ],
     },
     {
       icon: Shield,
-      title: "Data-Driven Intelligence",
+      title: "Legacy System Modernization",
       description: [
-        "We transform fragmented, underutilized data into structured, high-value systems. From predictive forecasting to anomaly detection, we turn your raw data into a competitive decision-making engine.",
+        "You don’t need to rebuild your entire stack to use AI. We wrap your legacy infrastructure in modern API layers, giving your older secure systems a \"voice\" and the ability to interact with modern Generative AI tools.",
       ],
     },
     {
       icon: Puzzle,
-      title: "Automation & Process Engineering",
+      title: "Secure Data Pipelines (RAG)",
       description: [
-        "Redesign core processes with AI at the center. Our clients typically reduce manual overhead by 40-60% while significantly improving speed, accuracy, and operational consistency.",
+        "We architect Retrieval-Augmented Generation (RAG) pipelines that securely feed your private business data to AI models in real-time. This ensures accurate answers based on your facts, not public internet hallucinations.",
       ],
     },
   ];
@@ -72,7 +72,7 @@ const Services = () => {
               What We Help You Achieve
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Engineering-led strategy that bridges the gap between potential and production.
+              We bridge the gap between "AI Potential" and "Production Reality."
             </p>
           </div>
 

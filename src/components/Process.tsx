@@ -6,37 +6,37 @@ const Process = () => {
     {
       number: "01",
       title: "Understand",
-      description: "Feasibility Audits & ROI Definition.",
+      description: "Audit your current ecosystem.",
       details:
-        "Identify high-impact AI opportunities within your data and workflows.",
+        "We map your current API ecosystem and identify data security bottlenecks before touching code.",
     },
     {
       number: "02",
       title: "Architect",
-      description: "Data Modeling & System Design.",
+      description: "Design the middleware core.",
       details:
-        "Architect AI systems aligned to your business goals and technical reality.",
+        "We design the middleware architecture, ensuring low latency and strict access controls for the AI.",
     },
     {
       number: "03",
       title: "Build",
-      description: "Rapid Prototyping & POCs.",
+      description: "Connect your systems to AI.",
       details:
-        "Embed AI into your existing stack without disruption.",
+        "We code the integrations, setting up the pipelines that allow your software to \"talk\" to the AI models.",
     },
     {
       number: "04",
       title: "Iterate",
-      description: "Model Validation & Testing.",
+      description: "Optimize for reliability and speed.",
       details:
-        "Refine and optimize models based on initial performance data.",
+        "We stress-test the connection for speed, handling edge cases where the AI might timeout or hallucinate.",
     },
     {
       number: "05",
       title: "Scale",
-      description: "Full Implementation Roadmap.",
+      description: "Harden for production traffic.",
       details:
-        "Monitor and evolve models as your business grows.",
+        "We implement caching and load balancing to ensure the integration survives peak traffic.",
     },
   ];
 
@@ -70,10 +70,10 @@ const Process = () => {
             className="text-4xl md:text-5xl font-bold mb-4"
             style={{ color: "#192841" }}
           >
-            The AI Engineering Blueprint
+            The Integration Roadmap
           </h2>
           <p className="text-xl text-muted-foreground">
-            From feasibility audit to roadmap execution.
+            How we safely connect AI to your business core.
           </p>
         </div>
 

@@ -12,21 +12,22 @@ const AudienceSegments = () => {
       icon: Rocket,
       title: "Funded Startups",
       description:
-        "Validate fast. We build robust, investor-ready MVPs that demonstrate real traction.",
-      cta: "Launch Your MVP",
+        "We wrap complex AI models in simple APIs, allowing you to build features quickly without hiring a full data science team.",
+      cta: "Build Your MVP",
     },
     {
       icon: Building2,
       title: "Enterprises",
       description:
-        "Modernize legacy systems with secure, scalable AI that unlocks data silos.",
-      cta: "Scale Your Operations",
+        "We connect Generative AI to your on-premise databases and ERPs using secure, private pipelines (RAG) that respect your governance.",
+      cta: "Modernize Your Stack",
     },
     {
       icon: Users,
       title: "Product Teams",
-      description: "Eliminate backlog bottlenecks. Our senior engineers plug directly into your workflow.",
-      cta: "Augment Your Team",
+      description:
+        "We handle the heavy lifting of vector databases and latency optimization so your frontend team can focus on UI/UX.",
+      cta: "Augment Your Backend",
     },
   ];
 
@@ -50,10 +51,10 @@ const AudienceSegments = () => {
               className="text-4xl md:text-5xl font-bold mb-4"
               style={{ color: "#192841" }}
             >
-              Who We Serve
+              Tailored Integration Models
             </h2>
             <p className="text-xl text-muted-foreground">
-              Tailored solutions for every type of organization
+              Whether you are building new or fixing old, we have the architecture.
             </p>
           </div>
 

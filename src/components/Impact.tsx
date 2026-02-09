@@ -10,15 +10,17 @@ const Impact = () => {
             AI With Purpose, Not Just Possibility
           </h2>
           <p className="text-xl text-muted-foreground mb-6">
-            AI shouldn't live in slide decks. It must live in your code.
+            AI shouldn't be a siloed experiment; it must be the engine of your business.
           </p>
           <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
             <p>
-              Our approach is engineering-led and outcome-driven. We identify exactly where AI creates real leverage - reducing cost, accelerating operations, and unlocking insights - and then we build secure, scalable systems that fit seamlessly into your ecosystem.
+              Most AI projects fail because they never leave the prototype phase. Our engineering-first approach ensures that AI integrations aren't just "cool features", they are production-grade systems.
             </p>
-            <p className="text-xl font-semibold" style={{ color: "#192841" }}>
-              No hype. No buzzwords. Just AI that delivers.
-            </p>
+            <ul className="text-base sm:text-lg text-muted-foreground list-disc pl-6 space-y-2">
+              <li>Zero "Spaghetti Code": Modular, maintainable architecture.</li>
+              <li>Low Latency: Optimized for speed and high-throughput.</li>
+              <li>Secure: Enterprise-grade encryption for all data in transit.</li>
+            </ul>
           </div>
         </div>
       </div>

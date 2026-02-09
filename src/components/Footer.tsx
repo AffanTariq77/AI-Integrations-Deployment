@@ -22,10 +22,10 @@ const Footer = () => {
             className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight px-2"
             style={{ color: "#192841" }}
           >
-            Your Data Already Knows What To Do Next
+            Your Data Is Talking. Are You Listening?
           </h2>
           <p className="text-xs xs:text-sm sm:text-base md:text-lg text-[#23395d] max-w-2xl mx-auto text-center leading-relaxed px-2">
-            Stop asking "Can AI help us?" and start seeing exactly how it improves performance, efficiency, and revenue.
+            Stop wondering "what if" and start seeing what AI can do for your bottom line.
           </p>
          <DialogTrigger asChild>
                 <Button className="bg-primary hover:bg-sky-400 text-primary-foreground hover:shadow-sky-blue text-xs xs:text-sm sm:text-base py-2 sm:py-3 px-4 xs:px-6 sm:px-8">
@@ -47,7 +47,7 @@ const Footer = () => {
                 <span className="text-[#23395d] opacity-30 hidden xs:inline">•</span>
                 <a href="#process" className="text-[#23395d] opacity-70 hover:text-sky-400 transition-colors font-medium whitespace-nowrap">Process</a>
                 <span className="text-[#23395d] opacity-30 hidden xs:inline">•</span>
-                <a href="#techstack" className="text-[#23395d] opacity-70 hover:text-sky-400 transition-colors font-medium whitespace-nowrap">Tech Stack</a>
+                <a href="#tech-stack" className="text-[#23395d] opacity-70 hover:text-sky-400 transition-colors font-medium whitespace-nowrap">Tech Stack</a>
               </nav>
               <div className="flex items-center gap-3 xs:gap-4">
                 <a

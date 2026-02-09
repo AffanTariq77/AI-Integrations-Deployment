@@ -5,21 +5,21 @@ import { Brain, Rocket, Zap } from "lucide-react";
 const pillars = [
   {
     icon: Brain,
-    title: "Security-First by Design",
+    title: "Security-First Mindset",
     description:
-      "Your data is your competitive edge. We build AI layers with strict security, compliance, and IP protection - ensuring trust at every level.",
+      "Your data is your most valuable asset. We build secure API gateways and PII masking layers to ensure sensitive customer data is never exposed to public models training sets.",
   },
   {
     icon: Rocket,
-    title: "End-to-End Ownership",
+    title: "End-to-End Accountability",
     description:
-      "We aren't just consultants who leave you with a PDF. From strategy and architecture to deployment and monitoring, we take full responsibility for the AI lifecycle.",
+      "From the first prompt to the millionth API call, we manage the lifecycle. If an API changes or a model updates, our modular architecture ensures your system doesn't break.",
   },
   {
     icon: Zap,
-    title: "Built for the Real World",
+    title: "Performance Optimization",
     description:
-      "We specialize in AI that works inside real businesses, navigating real constraints, messy data, real users and complex legacy integrations.",
+      "Integration introduces latency. We obsess over milliseconds, using vector caching and efficient token management to keep your user experience snappy and your cloud bills low.",
   },
 ];
 
@@ -43,10 +43,10 @@ const WhyWorkWithUs = () => {
             className="text-4xl md:text-5xl font-bold mb-4"
             style={{ color: "#192841" }}
           >
-            Why Companies Choose Us
+            Why Companies Trust Our Code
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We don't replace your systems, we make them smarter.
+            We treat AI integration as a critical engineering discipline.
           </p>
         </div>
         {/* SVG gradient definition rendered once */}

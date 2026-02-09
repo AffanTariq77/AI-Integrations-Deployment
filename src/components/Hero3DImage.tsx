@@ -8,6 +8,7 @@ import logo from "@/assets/pngwing.com.png";
 
 function FloatingImage({ textureUrl }: { textureUrl: string }) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const haloRef = useRef<THREE.Mesh>(null);
   const glowRef = useRef<THREE.PointLight>(null);
   const [hovered, setHovered] = useState(false);
   const [texture] = useState(() => new THREE.TextureLoader().load(textureUrl));
@@ -22,32 +23,54 @@ function FloatingImage({ textureUrl }: { textureUrl: string }) {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.needsUpdate = true;
+  }, [texture]);
+
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (meshRef.current) {
-      // Subtle floating motion
-      meshRef.current.position.y = Math.sin(t * 0.8) * 0.15;
-      
-      // Keep it facing camera - no rotation on X and Z
-      meshRef.current.rotation.y = 0;
-      meshRef.current.rotation.x = 0;
-      meshRef.current.rotation.z = 0;
-      
-      // Pulsing scale effect
-      const pulseScale = 0.9 + Math.sin(t * 2) * 0.1;
+      // Subtle floating motion + gentle tilt
+      meshRef.current.position.y = Math.sin(t * 0.7) * 0.18;
+      meshRef.current.rotation.y = Math.sin(t * 0.25) * 0.15;
+      meshRef.current.rotation.x = Math.sin(t * 0.35) * 0.06;
+      meshRef.current.rotation.z = Math.sin(t * 0.3) * 0.04;
+
+      // Pulsing scale effect (slightly stronger on hover)
+      const hoverBoost = hovered ? 0.05 : 0;
+      const pulseScale = 0.92 + Math.sin(t * 1.8) * (0.06 + hoverBoost);
       meshRef.current.scale.setScalar(pulseScale);
     }
     
     // Pulsing glow effect
     if (glowRef.current) {
-      const glowIntensity = 1 + Math.sin(t * 2.5) * 0.5;
+      const glowIntensity = 1.1 + Math.sin(t * 2.2) * (hovered ? 0.7 : 0.45);
       glowRef.current.intensity = glowIntensity;
+    }
+
+    if (haloRef.current) {
+      haloRef.current.rotation.z = -t * 0.2;
+      const haloPulse = 0.98 + Math.sin(t * 2.0) * (hovered ? 0.06 : 0.03);
+      haloRef.current.scale.setScalar(haloPulse);
+      const haloMaterial = haloRef.current.material as THREE.MeshBasicMaterial;
+      haloMaterial.opacity = hovered ? 0.55 : 0.4;
     }
   });
 
   return (
     <>
-      <pointLight ref={glowRef} position={[0, 0, 1]} color="#0050b4" intensity={0.8} distance={8} />
+      <pointLight ref={glowRef} position={[0, 0, 1]} color="#00b3ff" intensity={0.9} distance={8} />
+      <mesh ref={haloRef} position={[0, 0, -0.02]}>
+        <planeGeometry args={[2.85, 2.85]} />
+        <meshBasicMaterial
+          color="#3ad1ff"
+          transparent
+          opacity={0.4}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </mesh>
       <mesh
         ref={meshRef}
         onPointerOver={() => !isMobile && setHovered(true)}
@@ -56,7 +79,12 @@ function FloatingImage({ textureUrl }: { textureUrl: string }) {
         receiveShadow
       >
         <planeGeometry args={[2.5, 2.5]} />
-        <meshStandardMaterial map={texture} transparent />
+        <meshStandardMaterial
+          map={texture}
+          transparent
+          emissive={new THREE.Color("#4fd1ff")}
+          emissiveIntensity={hovered ? 0.55 : 0.35}
+        />
       </mesh>
     </>
   );
