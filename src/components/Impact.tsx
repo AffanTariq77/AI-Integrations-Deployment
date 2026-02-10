@@ -16,7 +16,7 @@ const Impact = () => {
             <p>
               Most AI projects fail because they never leave the prototype phase. Our engineering-first approach ensures that AI integrations aren't just "cool features", they are production-grade systems.
             </p>
-            <ul className="text-base sm:text-lg text-muted-foreground list-disc pl-6 space-y-2">
+            <ul className="text-base sm:text-lg text-muted-foreground list-disc list-inside space-y-2 text-left inline-block mx-auto">
               <li>Zero "Spaghetti Code": Modular, maintainable architecture.</li>
               <li>Low Latency: Optimized for speed and high-throughput.</li>
               <li>Secure: Enterprise-grade encryption for all data in transit.</li>
