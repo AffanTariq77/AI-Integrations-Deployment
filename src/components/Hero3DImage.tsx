@@ -61,16 +61,6 @@ function FloatingImage({ textureUrl }: { textureUrl: string }) {
   return (
     <>
       <pointLight ref={glowRef} position={[0, 0, 1]} color="#00b3ff" intensity={0.9} distance={8} />
-      <mesh ref={haloRef} position={[0, 0, -0.02]}>
-        <planeGeometry args={[2.85, 2.85]} />
-        <meshBasicMaterial
-          color="#3ad1ff"
-          transparent
-          opacity={0.4}
-          blending={THREE.AdditiveBlending}
-          depthWrite={false}
-        />
-      </mesh>
       <mesh
         ref={meshRef}
         onPointerOver={() => !isMobile && setHovered(true)}
@@ -78,7 +68,7 @@ function FloatingImage({ textureUrl }: { textureUrl: string }) {
         castShadow
         receiveShadow
       >
-        <planeGeometry args={[2.5, 2.5]} />
+        <planeGeometry args={[isMobile ? 3.5 : 2.5, isMobile ? 3.5 : 2.5]} />
         <meshStandardMaterial
           map={texture}
           transparent
